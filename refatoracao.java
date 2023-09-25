@@ -30,15 +30,17 @@ class Pedido {
     }
 }
 
-public double calcularTotalPedidos() {
+
+public class SistemaDePedidos {
+    
+    public double calcularTotalPedidos() {
     double total = 0;
     for (Item item : itens) {
         total += item.getPrecoItem();
     }
     return total;
-}
-
-public class SistemaDePedidos {
+    }
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Pedido> pedidos = new ArrayList<>();
